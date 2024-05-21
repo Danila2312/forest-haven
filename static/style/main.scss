@@ -15,6 +15,7 @@
 * {
   margin: 0;
   padding: 0;
+
   li {
     list-style: none;
   }
@@ -27,6 +28,8 @@ h2 {
   font-weight: lighter;
   text-decoration: underline;
   font-size: 36px;
+
+  padding-bottom: 40px;
 }
 
 h3 {
@@ -57,9 +60,9 @@ header {
     display: flex;
     align-items: center;
     padding: 30px 0;
-  
+
     border-bottom: 1px solid black;
-  
+
     justify-content: space-around;
   }
 
@@ -124,15 +127,65 @@ main {
   .about-us {
     display: flex;
     flex-direction: column;
+    padding: 50px 0;
+    max-width: 1280px;
+    margin: auto;
 
     &--wrapper {
       display: flex;
       justify-content: space-between;
       margin: 20px 0;
+      align-items: center;
+      h3 {
+        padding: 0 0 30px 0;
+      }
 
       &-text {
         max-width: 630px;
       }
+    }
+  }
+
+  .comfortably {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    max-width: 1280px;
+
+    background-color: #475055;
+    padding: 50px;
+    border-radius: 20px;
+    h2 {
+      color: #e8ebe5;
+    }
+
+    &-slider {
+      display: flex;
+      justify-content: space-around;
+    }
+  }
+
+  .advantages {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    max-width: 1280px;
+    padding: 30px 0 120px 0;
+    &-reasons {
+      display: flex;
+      justify-content: space-between;
+      &--item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        max-width: 245px;
+      }
+    }
+    img {
+      width: 65px;
     }
   }
 }
