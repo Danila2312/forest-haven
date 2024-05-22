@@ -162,6 +162,29 @@ main .advantages-reasons--item {
 main .advantages img {
   width: 65px;
 }
+main .catalog {
+  display: flex;
+  flex-direction: column;
+  background-color: #475055;
+  max-width: 1280px;
+  margin: auto;
+  padding: 50px;
+  border-radius: 20px;
+}
+main .catalog h2 {
+  color: #e8ebe5;
+}
+main .catalog-list {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+main .catalog-list--item {
+  max-width: 410px;
+  background-color: #e8ebe5;
+  border-radius: 20px;
+}
 
 footer {
   max-width: 1480px;
