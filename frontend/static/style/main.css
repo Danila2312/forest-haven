@@ -181,9 +181,21 @@ main .catalog-list {
   gap: 20px;
 }
 main .catalog-list--item {
+  display: flex;
+  flex-direction: column;
+  padding: 30px 40px;
+  align-items: center;
   max-width: 410px;
   background-color: #e8ebe5;
   border-radius: 20px;
+}
+main .catalog-list--item img {
+  max-width: 330px;
+  border-radius: 20px;
+}
+main .catalog-list--item p {
+  font-family: "Hero";
+  font-size: 20px;
 }
 
 footer {
