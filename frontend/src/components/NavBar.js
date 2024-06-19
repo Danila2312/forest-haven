@@ -2,36 +2,33 @@ import React, { useContext } from "react"
 import { NavLink } from "react-router-dom"
 import { Context } from ".."
 import { SHOP_ROUTE } from "../utils/consts"
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import {Button} from 'react-bootstrap'
+import { observer } from "mobx-react-lite";
 
-const NavBar = () => {
+
+const NavBar = observer( () => {
   const {user} = useContext(Context)
 
   return (
-    <header>
-      <div className="header-wrapper">
-        <div>
-          <NavLink to={SHOP_ROUTE}><h1>FOREST <span className="inter">&</span> HAVEN</h1> </NavLink>
-        </div>
-        <nav>
-          <ul>
-            <li><a href="">О нас</a></li>
-            <li><a href="">Дома</a></li>
-            <li><a href="">Забронировать</a></li>
-          </ul>
-        </nav>
-        <div>
-          <img src="static/img/telegram.png" alt="" />
-          <img src="static/img/whatsapp.png" alt="" />
-          <img src="static/img/image11.png" alt="" />
-        </div>
-        <div>
-          <Button></Button>
-          <a href="">Войти</a>
-          <a href="">Регистрация</a>
-        </div>
-      </div>
-    </header>
+    <Navbar bg="light" data-bs-theme="light">
+        <Container>
+          <NavLink style={{color:'black'}} to={SHOP_ROUTE}>Forest & Haven</NavLink>
+          {user.isAuth ?
+          <Nav className="ml-auto">
+            <Button variant="outline-dark">Админ</Button>
+            <Button variant="outline-dark">Войти</Button>
+          </Nav>
+            :
+          <Nav className="ml-auto">
+            <Button variant="outline-dark" onClick={() => user.setIsAuth(true)}>Авторизация</Button>
+          </Nav>
+          }
+        </Container>
+      </Navbar>
   )
-}
+})
 
 export default NavBar
