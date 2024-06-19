@@ -1,6 +1,6 @@
 import { Component } from "react"
 import Admin from "./page/Admin"
-import { ADMIN_ROUTE, BASKET_ROUTE, LOGIN_ROUTE, REGISTRATION_ROUTE, SHOP_ROUTE } from "./utils/consts"
+import { ADMIN_ROUTE, BASKET_ROUTE, LOGIN_ROUTE, REGISTRATION_ROUTE, SHOP_ROUTE, DEVICE_ROUTE } from "./utils/consts"
 import Basket from "./page/Basket"
 import Shop from "./page/Shop"
 import Auth from "./page/Auth"

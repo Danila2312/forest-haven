@@ -1,13 +1,23 @@
 import React from "react";
-import {Switch, Route, Redirect } from 'react-router-dom'
+import { authRoutes, publicRoutes } from "../routes";
+import { Routes, Route } from "react-router-dom";
+// import { SHOP_ROUTE } from "../utils/consts";
 
 
 const AppRouter = () => {
+  const isAuth = false
   return (
-    <div>
-      
-    </div>
-  )
-}
+  <Routes>
+    {isAuth && authRoutes.map(({path, Component}) => 
+      <Route key={path} path={path} Component={Component} exact/>
+    )}
+    {publicRoutes.map(({path, Component}) => 
+    <Route key={path} path={path} Component={Component} exact/>
+    )}
+  </Routes>
+
+  );
+  
+};
 
 export default AppRouter;
