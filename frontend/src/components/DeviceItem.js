@@ -15,12 +15,12 @@ const DeviceItem = ({ device }) => {
     >
       <Card
         className="d-flex  m-4"
-        style={{ width: 200, cursor: "pointer" }}
+        style={{ width: 210, cursor: "pointer" }}
         border="dark"
       >
-        <Image width={200} height={150} src={device.img} />
+        <Image className="rounded-2 mt-1 m-auto" width={200} height={150} src={process.env.REACT_APP_API_URL + device.img} />
         <div className="d-flex m-2 justify-content-between align-items-center">
-          <div className="text-black-50">Тип дома</div>
+          <div className="text-black-50">{}</div>
           <div className="d-flex align-items-center">
             <div>{device.rating}</div>
             <CiStar />
